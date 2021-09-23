@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+	<title>Services</title>
+	<link rel="stylesheet" type="text/css" href="Services.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,300;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+	<script>
+		function setServiceID(x)
+		{
+			localStorage.setItem("ServiceID", x);
+		}
+	</script>  
+</head>
+
+<body>
+  <section class="service">
+  	<nav>
+  		<img src="images/m4ylogo.png">
+  		<h1 class="head">Made4you Pvt Ltd</h1>
+  		<div class=links id="links">
+   	   		<i class="fas fa-times" onclick="hideMenu()"></i>
+   	   		<ul>
+   	   			<li><a href="Home.html">HOME</a></li>
+   	   			<li><a href="Services.html">SERVICES</a></li>
+   	   			<li><a href="Contact_Us.html">CONTACT US</a></li>
+   	   		</ul>
+   	   	</div>
+   	   	<i class="fa fa-bars" onclick="showMenu()"></i>
+  	</nav>
+
+     <h2 class="head1">Services We Provide</h2>
+  	
+    <div class="row">
+  	  <div class="col">
+  	  	  <div class="head2"><h3>Development</h3></div>
+  			  <img src="images\development.jpg" height="200px" width="100%">
+  			  <p>We develop responsive, functional and super-fast websites.We keep User Experience in mind while creating websites.A website should load quickly and should be accessible even on a small view-port and slow internet connection.</p>
+  			  <div class="quotation1"><a href="Contact_Us.html" ><button onclick="setServiceID(2)">Get Quotation</button></a></div>
+  	  </div>
+  	  <div class="col">
+  			  <div class="head2"><h3>Consultancy</h3></div>
+  			  <img src="images\consultancy.jpg" height="200px" width="100%">
+  			  <p>We are here to provide you with expert advice on your design and development requirements.</p>
+  			  <div class="quotation2"><a href="Contact_Us.html" ><button onclick="setServiceID(1)">Get Quotation</button></a></div>
+  	  </div>
+  	  <div class="col">
+			  <div class="head2"><h3>Videos</h3></div>
+			  <img src="images\video.jpg" height="200px" width="100%">
+			  <p>We create a polished professional video that impresses your audience.</p>
+			  <div class="quotation3"><a href="Contact_Us.html" ><button onclick="setServiceID(3)">Get Quotation</button></a></div>
+  	  </div>
+    </div>
+</section>
+
+  <footer class="footer">
+		<div class="ic">
+			<i>Chat with us and get a quotation as soon as possible:7978665534</i>
+			<img src="images/whatsapp.png" style="height: 30px;" >
+			<img src="images/facebook.png" style="height: 30px;" >
+			<img src="images/insta.png" style="height: 30px;" >
+			<img src="images/twiter.png" style="height: 30px;" >
+		</div>
+  </footer>
+
+  <script type="text/javascript">
+   	var links = document.getElementById("links");
+   	function showMenu(){
+   		links.style.right = "0";
+   	}
+   	function hideMenu(){
+   		links.style.right = "-200px";
+   	}
+   </script>
+ 
+</body>
+</html>

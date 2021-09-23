@@ -1,0 +1,240 @@
+html,body{
+    background-color: rgb(241, 234, 234);
+}
+nav{
+	display: flex;
+    padding:10px;
+    padding: 1% 2%;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #221d33;
+    height: 100px;
+}
+nav img{
+	width: 100px;
+}
+.head{
+  color: white;
+  font-size: 50px;
+  width:100%;
+  text-shadow: 2px 2px 5px red;
+  padding: 0% 2%;
+  font-family: 'poppins';
+  text-align: left;
+}
+.footer{
+    background-color: #221d33;
+    height: 45px;
+    font-size: 40px;
+    position: relative;
+}
+.ic{
+	position:absolute;
+	margin-bottom: 0px;
+	width:100%;
+	bottom: 1%;
+	color:white;
+	margin-right: 0px;
+	text-align:  center;
+}
+h2{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    display: block;
+    float: none;
+    padding:6px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+}
+.form{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.form label{
+    margin:8px;
+    font-size:20px;
+    float: center;
+    text-align: left;
+}
+.form select{
+    margin:8px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 3px;
+    align-content: left;
+}
+.form input{
+    margin:8px;
+    max-width: 120px;
+    width:100%;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 3px;
+    float:center;
+}
+.table {
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    background-color:white;
+}
+.table th {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#table td:hover{
+    display: over;
+}
+.table td {
+    padding:0;
+    border: 1px solid black;
+    border-radius: 0px;
+    text-align: left;
+}
+.refreshbutton{
+    font-weight: bold;
+    margin:10px 170px;
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 9px ;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 15%;  
+    height: 20%;
+    box-align: center;
+    transition: 0.5s;
+}
+.refreshbutton:hover{
+    background-color: rgb(71, 151, 255)
+}
+.delete{
+    border: 3px solid black;
+    border-radius: 4px;
+    background-color: rgb(238, 237, 245);
+}
+
+@media(max-width: 700px)
+{
+    html,body{
+        background-color: rgb(241, 234, 234);
+        height: auto;
+    }
+    nav{
+        display: flex;
+        padding:10px;
+        padding: 1% 2%;
+        justify-content: space-between;
+        align-items: center;
+        width:90vh;
+        background-color: #221d33;
+        height: 100px;
+    }
+    nav img{
+        width: 100px;
+    }
+    .head{
+      color: white;
+      font-size: 30px;
+      width:90vh;
+      text-shadow: 2px 2px 5px red;
+      font-family: 'poppins';
+      text-align: left;
+    }
+    .footer{
+        background-color: #221d33;
+        height: 45px;
+        font-size: 30px;
+        width:90vh;
+        position: relative;
+        margin-top: 30px;
+     }
+     .ic{
+        position:absolute;
+        margin-bottom: 0px;
+        width:100%;
+        bottom: 1%;
+        color:white;
+        margin-right: 0px;
+        text-align:  center;
+      }
+    h2{
+        width: 79vh;
+        text-align: center;
+        font-size: 18px;
+        display: block;
+        float: none;
+     }
+     .form{
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-left: 85px;
+    }
+    .form select{
+        width: 95%;
+        margin:8px;
+        margin-left:3px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+    .form label{
+        margin:8px;
+        font-size:13px;
+        float: center;
+        text-align: left;
+    }
+    .form textarea{
+        width:90%;
+        margin:10px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 3px; 
+    }
+    .form input{
+        margin: 8px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 3px;
+        max-width:100px;
+    }
+    .table {
+        padding: 0;
+        width: 50%;
+        margin-top: 10px;
+        height: auto;
+        background-color: white;
+    }
+    .table th {
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size:10px;
+    }
+    .table td {
+        padding:0;
+        width:20%;
+        border: 1px solid black;
+        border-radius: 0px;
+        text-align: center;
+    }
+    .refreshbutton{
+        font-weight: bold;
+        margin:10px 100px;
+        font-size: 10px;
+        padding: 5px ;
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 30%;  
+        transition: 0.5s;
+    }
+    .refreshbutton:hover{
+        background-color: rgb(71, 151, 255)
+    }
+}

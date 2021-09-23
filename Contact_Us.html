@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact_Us.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,300;1,700&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Contact us</title>
+
+<script>
+    function alertMessage(strMessage)
+    {
+        alert("Name field cannot be empty");
+    }
+
+    function validateForm(){
+        var name=document.getElementById("name");
+        var phone=document.getElementById("contact");
+        var message=document.getElementById("message");
+        
+        name.value = name.value.trim();
+        if(name.value == null || name.value == ""){
+             alert("Name field cannot be empty");
+             name.focus();
+             return false;
+        }else if(!isNaN(name.value)){
+            alert("Please enter only text for Name");
+            name.focus();
+            return false;
+        }
+        
+        phone.value = phone.value.trim();
+        if(phone.value.length!=10 || phone.value == null || phone.value == ""){
+              alert("Contact Number should be exactly 10 digits");
+              phone.focus();
+              return false;
+        } else if(isNaN(phone.value)){
+            alert("Please enter only digits for Contact Number");
+            phone.focus();
+            return false;
+        }
+
+        message.value = message.value.trim();
+        if(message.value == null || message.value == "")
+        {
+            alert("Message field cannot be empty");
+            message.focus();
+            return false;
+        }else if(!isNaN(message.value)){
+            alert("Please enter valid Message text");
+            message.focus();
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</head>
+
+<body>
+    <section class="service">
+        <nav>
+            <img src="images/m4ylogo.png">
+            <h1 class="head">Made4you Pvt Ltd</h1>
+            <div class="links" id="links">
+                    <i class="fas fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="Home.html">HOME</a></li>
+                        <li><a href="Services.html">SERVICES</a></li>
+                        <li><a href="Contact_Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <h2><b>We would like to hear it from you on your query!</b></h2>
+    <section class="ContactUS">
+    <div class="form">
+        <form name="contactus" method="post" action="Contact_Us.php" onsubmit="return validateForm()">
+        <label for="services"><b>Select service:</b></label>
+        <select id="services"name="services">
+            <option value="1">Consultancy</option>
+            <option value="2">Development</option>
+            <option value="3">Videos</option>
+        </select>
+
+        <script>
+            var serviceID = localStorage.getItem("ServiceID");
+            if(typeof serviceID == 'undefined' || !serviceID || serviceID.length === 0 || serviceID === "" ||
+                     !/[^\s]/.test(serviceID) || /^\s*$/.test(serviceID) || serviceID.replace(/\s/g,"") === "")
+                     document.getElementById("services").value = 1;
+            else
+                     document.getElementById("services").value = localStorage.getItem("ServiceID");
+        </script>
+
+        <label for="name"><b>Enter your name:</b></label>
+        <input type="text" id="name" name="name">
+        <label for="contact"><b>Enter contact number:</b></label>
+        <input type="tel" id="contact" name="contact">
+        <label for="email"><b>Enter email address:</b></label>
+        <input type="email" id="email" name="email" required>
+        <label for="umessage"><b>Write your message here:</b></label>
+        <textarea type="text" id="umessage" cols="66px"rows="10" name="umessage"></textarea>
+        <button type="submit" class="button">Submit</button> 
+        </form>
+    </div>
+   <br>
+</section>
+    <footer class="footer">
+       <div class="ic">
+         <i style="color: white;">Chat with us and get a quotation as soon as possible:7978665534</i>
+         <img src="images/whatsapp.png" style="height: 30px;">
+         <img src="images/facebook.png" style="height: 30px;" >
+        <img src="images/insta.png" style="height: 30px;" >
+        <img src="images/twiter.png" style="height: 30px;" >
+     </div> 
+   </footer>
+
+    <script type="text/javascript">
+        var links = document.getElementById("links");
+        function showMenu(){
+            links.style.right = "0";
+        }
+        function hideMenu(){
+            links.style.right = "-220px";
+        }
+ 
+    </script>
+</body>
+
+</html>
