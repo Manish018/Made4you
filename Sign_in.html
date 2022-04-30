@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Page</title>
+    <link rel="stylesheet" href="Sign_Up.css">
+    
+<script>
+    function validateForm(){
+        var password=document.getElementById("password");
+        
+        password.value = password.value.trim();
+        if(password.value.length<8 || password.value == null || password.value == ""){
+              alert("Password Should be atleast of 8 characters or more");
+              password.focus();
+              return false;
+        } 
+        return true;
+    }
+</script>
+</head>
+
+<body>
+    <h2>Welcome Back User!</h2>
+    <h2><b>Sign In</b></h2>
+    <section class="login">
+    <div class="form">
+    <form name="login" method="post" action="Sign_in.php" onsubmit="return validateForm()">
+        <label for="email"><b>Enter Email Address:</b></label>
+        <input type="email" id="email" name="email" required>
+        <label for="password"><b>Enter your Password:</b></label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" class="button">Submit</button>
+        <p><b>New User?</b> <a href="Sign_Up.html">Sign Up</a></p>
+    </form> 
+</body>
+</html>

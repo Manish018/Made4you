@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Sign_Up.css">
+    
+<script>
+    function validateForm(){
+        var email = document.getElementById("email");
+        var password=document.getElementById("password");
+
+        var mailformat = "COMPSOFT.COM";
+        var myArray = email.value.split("@");
+        var enteredEmail = myArray[1];
+        enteredEmail = enteredEmail.toUpperCase();
+        var result = enteredEmail.localeCompare(mailformat);
+
+        if(result != 0)
+        {
+                alert("Please Signup using Company's Email Address!");    //The pop up alert for an invalid email address
+                email.focus();
+                return false;
+        }
+
+        password.value = password.value.trim();
+        if(password.value.length<8 || password.value == null || password.value == ""){
+              alert("Password Should be atleast of 8 characters or more");
+              password.focus();
+              return false;
+        } 
+      return true;  
+    }
+</script>
+</head>
+
+<body>
+    <h2><b>Sign Up</b></h2>
+    <section class="login">
+    <div class="form">
+    <form name="login" method="post" action="Sign_Up.php" onsubmit="return validateForm()">
+        <label for="email"><b>Enter Email Address:</b></label>
+        <input type="email" id="email" name="email" required>
+        <label for="password"><b>Enter your Password:</b></label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" class="button">Submit</button>
+        <p><b>Existing User?</b> <a href="Sign_in.html">Sign in</a></p>
+    </form> 
+</body>
+</html>
